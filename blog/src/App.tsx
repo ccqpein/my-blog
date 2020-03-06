@@ -21,12 +21,13 @@ function App() {
 }
 
 function Button() {
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'http://www.google.com')
-    // send the request
-    xhr.send()
-
-    return (<>{xhr.responseText}</>)
+    return (<button
+        type="button"
+        onClick={(e): void => {
+            e.preventDefault();
+            window.location.href = '/posts/';
+        }}
+    > Click here</button>)
 }
 
 export default App;
