@@ -1,7 +1,5 @@
 'use strict';
 
-const e = React.createElement;
-
 let t = document.createElement('div');
 t.setAttribute("id", "menu");
 let b = document.getElementsByTagName("body");
@@ -18,12 +16,12 @@ class LikeButton extends React.Component {
       return 'You liked this.';
     }
 
-    return e(
-      'button',
-      { onClick: () => this.setState({ liked: true }) },
-      'Like'
-    );
+    return (
+      <button onClick={() => this.setState({ liked: true })}>
+        Like
+      </button>
+);
   }
 }
 
-ReactDOM.render(e(LikeButton), document.getElementById('menu'));
+ReactDOM.render(<LikeButton />, document.getElementById('menu'));
