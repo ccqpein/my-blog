@@ -5,8 +5,8 @@ import App from './App';
 //import * as serviceWorker from './serviceWorker';
 
 let t = document.createElement('div');
-t.setAttribute("id", "root");
+t.setAttribute("id", "menu");
 let b = document.getElementsByTagName("body");
 b[0].insertAdjacentElement("afterbegin", t);
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(<App />, document.getElementById('menu'));
